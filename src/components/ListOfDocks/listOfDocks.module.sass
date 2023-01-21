@@ -1,0 +1,38 @@
+@import 'src/styles/variables'
+
+.listOfDocks
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr))
+    gap: 1rem
+    margin: 1rem 0
+
+    .dock
+        display: flex
+        flex-direction: column
+        border: 2px solid rgba($red-heytics, 1)
+        border-radius: 0.5rem
+        padding: 1rem
+        max-width: 15rem
+        background: rgba($red-heytics, 0.5)
+        transition: all 0.5s
+        &.checked
+            background: rgba($green-heytics, 0.5)
+            border: 2px solid rgba($green-heytics, 1)
+        .title
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 4rem
+            width: 100%
+            margin-bottom: 1rem
+            .input
+                max-width: 10rem
+            button
+                height: 2rem
+                width: 2rem
+                padding: 0.5rem
+                border-radius: 0.5rem
+                border: none
+        .info
+            height: 2rem
+            width: 100%

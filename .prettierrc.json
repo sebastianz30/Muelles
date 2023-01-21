@@ -1,0 +1,13 @@
+{
+  "arrowParens": "avoid",
+  "generatorStarSpacing": true,
+  "offsetTernaryExpressions": true,
+  "printWidth": 92,
+  "quoteProps": "consistent",
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "spaceBeforeFunctionParen": true,
+  "trailingComma": "none",
+  "yieldStarSpacing": true
+}

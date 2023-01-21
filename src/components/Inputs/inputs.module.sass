@@ -1,0 +1,154 @@
+@import 'src/styles/variables'
+
+.wrapper
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  border-radius: 30px
+  border: 1px solid rgba($black, 0.4)
+  transition: background 0.2s
+
+  &.select
+    cursor: pointer
+    height: 2.3rem
+
+    .options
+      position: absolute
+      z-index: 10
+      top: 120%
+      overflow-y: scroll
+      width: 100%
+      max-height: 8rem
+      box-shadow: $box-shadow
+      background: $white
+      border-radius: $border-radius
+      
+
+      .option
+        padding: $spacing-xs $spacing-s
+        font-family: $secondary-font
+        color: $text-color
+        font-size: 0.9rem
+
+        &:hover
+          background: $base-gray
+
+      .empty
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: $spacing-xs 0
+        h4
+          color: $base-gray
+        i
+          position: static
+
+    i
+      position: absolute
+      right: 0.8rem
+      font-size: 1.1rem
+      color: $border-color
+      transition: $transition
+
+      &.rotate
+        transform: rotate(180deg)
+
+  &.error
+    border: 2px solid $error-text-color
+
+    .label
+      color: $error-text-color !important
+
+  &.disabled
+    cursor: not-allowed
+
+    .label
+      color: #a5adba !important
+
+    input, .input
+      color: rgba($black, 1)
+      opacity: 50%
+      cursor: not-allowed
+
+  &.focus
+    
+    border: 1px solid $primary
+    background: $white !important
+
+    .label, i
+      color: $primary
+      background: $white !important
+
+  .label
+    width: max-content
+    max-width: 95%
+    position: absolute
+    padding: 0 $spacing-xxs
+    background: $white
+    color: $text-color
+    transition: $transition
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    &.placeholder
+      left: 0.55rem
+      top: 0.5rem
+      font-size: 0.9rem
+      opacity: 0.8
+
+    &.move
+      top: -0.7rem
+      left: 0.5rem
+      font-size: 0.8rem
+
+    &.noLabel
+      display: none
+
+  .loginInputLabel
+    width: max-content
+    max-width: 95%
+    position: absolute
+    padding: 0 $spacing-xxs
+    background: $white
+    color: $text-color
+    transition: $transition
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    &.placeholder
+      left: 0.55rem
+      top: 0.5rem
+      font-size: 0.9rem
+      opacity: 0.8
+
+    &.move
+      top: -1.2rem
+      left: 0.5rem
+      font-size: 0.8rem
+      color: $white
+
+    &.noLabel
+      display: none
+
+  input, textarea, .mask
+    width: 100%
+    padding: 0.5rem 0.5rem 0.5rem 1rem
+    font-size: 0.9rem
+    outline: none
+    color: $text-color
+    border: none
+    border-radius: 30px
+    background: transparent
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button,
+  textarea::-webkit-outer-spin-button,
+  textarea::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+    &::placeholder
+      color: $text-color

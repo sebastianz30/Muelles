@@ -1,0 +1,24 @@
+@mixin xxl()
+    @media (min-width: 1536px)
+        @content
+@mixin xl()
+    @media (min-width: 1280px)
+        @content
+@mixin desktop()
+    @media (min-width: 1024px)
+        @content
+@mixin tablet2()
+    @media (max-width: 1023px)
+        @content
+@mixin tablet()
+    @media (max-width: 1023px)
+        @content
+@mixin phone()
+    @media (max-width: 425px)
+        @content
+@mixin phone_xs()
+    @media (max-width: 320px)
+        @content
+@mixin fold()
+    @media (max-width: 280px)
+        @content
